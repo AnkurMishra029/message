@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://img.freepik.com/free-vector/valentines-day-background-with-decorative-mandala-design-hearts_1048-13656.jpg?w=360&t=st=1695535294~exp=1695535894~hmac=47f2548c447f60141868828b8e9f600b97fd07f88ed43528204b4e8e2cb254b4);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 90%;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ff0055;
+}
+
+.message-box {
+    width: 80%;
+    margin: 95px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#message-line {
+    font-size: 24px;
+    margin: 0;
+    padding: 10px;
+}
+
+.hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* background-image: url(https://images.unsplash.com/photo-1515871204537-49a5fe66a31f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhcnRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60); */
+    background-repeat: no-repeat;
+    animation: fall 20s linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+  </style>
+    <title>Aliza This For You</title>
+</head>
+<body>
+    <header>
+        <h1>ALIZA THIS FOR YOU</h1>
+    </header>
+    <div class="message-box">
+        <p id="message-line"></p>
+    </div>
+    <div class="hearts"></div>
+   <script>const messageLine = document.getElementById('message-line');
+    const messages = [
+        "this is about you I wanted to gift you something handmade and forever lasting",
+        "Par mujhe kuch aata hi nahi hai so I was unable to do so",
+        "this is the only thing that I can do by hands and thoda thik thak kr leta hu",
+        "so I am doing this for one of the very important persons in my life",
+        "Just remember that I am blessed to have u",
+        "remember k tum mera keemti Asasa ho and asasa means treasure ",
+        " The thing is I wanted to make this site more beautifull but yrr usme kuch issues hai so mai nhi kr raha hu ",
+        " ummmmm just remember k I just love whatever I do for you zyada cheezein tum karne hi nahi deti but still whatever I am allowed to do I Love doing it",
+        " Thanks for being there Aliza"
+
+    ];
+    
+    let messageIndex = 0;
+    
+    function displayMessage() {
+        if (messageIndex < messages.length) {
+            messageLine.textContent = messages[messageIndex];
+            messageIndex++;
+        } else {
+            messageIndex = 0;
+            messageLine.textContent = messages[messageIndex];
+        }
+    }
+    
+    setInterval(displayMessage, 5000);
+    </script>
+</body>
+</html>
